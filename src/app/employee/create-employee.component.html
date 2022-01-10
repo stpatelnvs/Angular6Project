@@ -1,7 +1,7 @@
 <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="form-horizontal">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Create Employee</h3>
+            <h3 class="panel-title">Create Employees</h3>
         </div>
         <div class="panel-body">
             <div class="form-group">
@@ -10,7 +10,7 @@
                     <input id="fullName" formControlName="fullName" type="text" class="form-control" onemptied="logValidationErrors()">
                     
                 </div>
-                <label class="col-sm-2 control-label">Full Ngcchccame Length is here:</label>
+                <label class="col-sm-2 control-label">Full Name Length :</label>
                 {{formErrors['fullName']}}
             </div>
 
