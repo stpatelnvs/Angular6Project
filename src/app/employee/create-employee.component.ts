@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl, AbstractControl, FormBuilder, Validators, MaxLengthValidator, MinLengthValidator } from '@angular/forms';
 
 
 @Component({
@@ -33,8 +33,8 @@ export class CreateEmployeeComponent implements OnInit {
   
   validationMessages: { [key: string]: any } = {
     'fullName': {
-      'required': 'Full Name is required.',
-      'minlength': 'Full Name must be greater than 2 characters.',
+      'required': 'Full Name is required here changes to stage .',
+      'minlength': 'Full Name must be greater than 3 characters.',
       'maxlength': 'Full Name must be less than 10 characters.'
     },
     'email': {
@@ -92,7 +92,7 @@ export class CreateEmployeeComponent implements OnInit {
     });
   }
 
-  onLoadDataClick(): void {
+  onLoadDataClick(): void { 
     this.logValidationErrors(this.employeeForm);
     console.log(this.formErrors);
   }
@@ -102,8 +102,8 @@ export class CreateEmployeeComponent implements OnInit {
   ngOnInit(): void {
 
     this.employeeForm = this.fb.group({
-      fullName: ['', Validators.required, Validators.minLength(2), Validators.maxLength(10)],
-      email: ['', Validators.required, Validators.minLength(2), Validators.maxLength(10)],
+      fullName: ['',Validators.required,Validators.minLength.length],
+      email: ['', Validators.required],
       skills: this.fb.group({
         skillName: ['', Validators.required],
         experienceInYears: ['', Validators.required],
@@ -117,6 +117,8 @@ export class CreateEmployeeComponent implements OnInit {
     //   this.logValidationErrors(this.employeeForm);
     // });
   }
+
+  logM() {console.log('bluuuuuuur')}
 
   logValidation(group: FormGroup) {
 
