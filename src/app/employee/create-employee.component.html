@@ -7,17 +7,16 @@
             <div class="form-group">
                 <label class="col-sm-2 control-label" for="fullName">Full Name:</label>
                 <div class="col-sm-8">
-                    <input id="fullName" formControlName="fullName" type="text" class="form-control" onemptied="logValidationErrors()">
-                    
+                    <input id="fullName" formControlName="fullName" type="text" class="form-control">    
                 </div>
                 <label class="col-sm-2 control-label">Full Name Length :</label>
                 {{formErrors['fullName']}}
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label" for="email">Email id</label>
+                <label class="col-sm-2 control-label" for="email">Email id :</label>
                 <div class="col-sm-8">
-                    <input id="email" formControlName="email" type="text" class="form-control" onblur="logValidationErrors()">
+                    <input id="email" formControlName="email" type="text" class="form-control" >
                 </div>
                 {{formErrors['email']}}
             </div>
@@ -53,7 +52,7 @@
     </div>
 </form>
 
-<!-- <table border="1">
+<table border="1">
     <tr>
         <th>Form Group</th>
         <th>Form Control-fullname</th>
@@ -85,4 +84,4 @@
             {{employeeForm.get('skills')?.get('proficiency')?.value}}
         </td>
     </tr>
-</table> -->
+</table>
