@@ -33,9 +33,9 @@ export class CreateEmployeeComponent implements OnInit {
   
   validationMessages: { [key: string]: any } = {
     'fullName': {
-      'required': 'Full Name is required .',
+      'required': 'Full Name is required here changes to stage .',
       'minlength': 'Full Name must be greater than 3 characters.',
-      'maxlength': 'Full Name must be less than 11 characters.'
+      'maxlength': 'Full Name must be less than 10 characters.'
     },
     'email': {
       'required': 'Email is required.'
